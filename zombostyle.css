@@ -1,0 +1,47 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+    color: limegreen;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 10;
+    padding-right: 25px;
+    border: 16px white solid;
+}
+
+.pulse-meep {
+    animation: pulse 5s infinite;
+    color: yellowgreen
+}
+
+.custom-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.custom-button:hover {
+    background-color: #45a049;
+
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; 
+        color: orangered; 
+        border-color: pink; 
+        border-width: 400px;
+    }
+}

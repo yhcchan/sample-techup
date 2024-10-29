@@ -3,55 +3,29 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>RIPOFF ZOMBO COM</title>
-        <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: black;
-            color: limegreen;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            overflow: hidden;
-        }
-
-        h1 {
-            font-size: 3em;
-            margin: 0;
-        }
-
-        .pulse {
-            animation: pulse 0.1s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-        </style>
+        <title>RIPOFF ZOMBO COM</title> 
+        <link rel = "stylesheet" href="zombostyle.css"/>
     </head>
     <body>
         <div>
-            <h1 class="pulse">Welcome to Zombo dot com.</h1>
-            <p>The only limit is yourself.</p>
+            <h1 class="pulse-meep">Welcome to Zombo dot com.</h1>
+            <button class="custom-button" onclick="alert('Button clicked!')">The only limit is youtself.</button>
         </div>
 
         <script>
             // Optional: JavaScript to give the classic endless welcome message.
             const messages = [
-                "Welcome to Zombo.com",
-                "The only limit is yourself.",
-                "Anything is possible at Zombo.com",
-                "Welcome... to Zombo.com"
+                'Welcome to <a href="https://zombo.com" target="_blank">Zombo.com</a>',
+                'The only limit is yourself.',
+                'Anything is possible at <a href="https://zombo.com" target="_blank">Zombo.com</a>',
+                'Welcome... to <a href="https://zombo.com" target="_blank">Zombo.com</a>'
             ];
-
+        
             let currentIndex = 0;
-
+        
             setInterval(() => {
-                document.querySelector("h1").textContent = messages[currentIndex];
+                // Use innerHTML to allow links in messages
+                document.querySelector("h1").innerHTML = messages[currentIndex];
                 currentIndex = (currentIndex + 1) % messages.length;
             }, 3000);
         </script>
